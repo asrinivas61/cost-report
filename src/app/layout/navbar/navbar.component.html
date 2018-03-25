@@ -1,0 +1,105 @@
+<nav class="navbar navbar-bootsnipp navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left">
+      <li class="dropdown" *ngFor="let menu of menus; let k=index">
+        <a class="dropdown-toggle animate" [ngClass]="{'toggle': menu.open}" (click)="toggleMenu(menu)">
+          {{menu.name}}
+          <span class="caret"></span>
+        </a>
+        <ul *ngIf="k==0" class="dropdown-menu" [ngClass]="{'open': menu.open}" role="menu">
+          <li class="searchInput">
+            <span class="faSearch"><fa name="search"></fa></span>
+            <span class="input">
+              <input type="text" name="search" placeholder="Search" (keyup)="heirarchySearch($event, menu)">
+            </span>
+          </li>
+          <li class="items" *ngFor="let menuItem of menu.items; let i=index">
+            <a class="animate primMenu">
+              <div class="liItem">
+                <span class="itemName">{{menuItem.name}}</span>
+                <span class="plusSpan pull-left">
+                  <div class="plus" (click)="toggleSubmenu(menuItem)" *ngIf="menuItem?.subItems?.length>0">
+                    <span *ngIf="menuItem.open; else minus">
+                      <fa name="minus"></fa>
+                    </span>
+                    <ng-template #minus>
+                      <fa name="plus"></fa>
+                    </ng-template>
+                  </div>
+                </span>
+                <span class="pull-right">
+                  <input type="checkbox" id="check" name="check" (change)="menuChecked($event,menuItem, i)">
+                </span>
+              </div>
+            </a>
+            <ul class="dropdown-menu" [ngClass]="{'openSubmenu': menuItem.open}" role="menu">
+              <li class="items" *ngFor="let menuSubItem of menuItem.subItems; let j=index">
+                <a class="animate subAnc">
+                  <div class="liItem">
+                    <span class="itemName">{{menuSubItem.name}}</span>
+                    <span class="plusSpan pull-left">
+                      <div class="plus" (click)="toggleSubmenuChild(menuSubItem)" *ngIf="menuSubItem?.subItems1?.length>0">
+                        <span *ngIf="menuSubItem.open; else minus">
+                          <fa name="minus"></fa>
+                        </span>
+                        <ng-template #minus>
+                          <fa name="plus"></fa>
+                        </ng-template>
+                      </div>
+                    </span>
+                    <span class="pull-right">
+                      <input type="checkbox" id="check" name="check" (change)="submenuChecked($event, menuSubItem, i, j)">
+                    </span>
+                  </div>
+                </a>
+                <ul class="dropdown-menu" [ngClass]="{'openSubmenu': menuSubItem.open}" role="menu">
+                  <li class="items" *ngFor="let menuSubItem1 of menuSubItem.subItems1">
+                    <a class="animate ancAnc">
+                      <div class="liItem">
+                        <span class="itemName">{{menuSubItem1.name}}</span>
+                        <span class="pull-right">
+                          <input type="checkbox" id="check" name="check">
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul *ngIf="k==1" class="dropdown-menu" [ngClass]="{'openEquip': menu.open}" role="menu">
+          <li class="searchInput1">
+            <span class="faSearch"><fa name="search"></fa></span>
+            <span class="input">
+              <input type="text" name="search" placeholder="Search" (keyup)="equipSearch($event, menu)">
+            </span>
+          </li>
+          <li class="equipItem" *ngFor="let item of equipList">
+            <a class="animate">
+              <div class="liItem">
+                <span class="itemName">{{item.name}}</span>
+                <span class="pull-right">
+                  <input type="checkbox" id="check" name="check" (change)="equipChecked($event, item)">
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="selectAll">
+            <span class="selectAll">Select all</span>
+            <span class="pull-right">
+              <input type="checkbox" id="check" name="check" (change)="equipSelectAllChecked($event, item)">
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>24 H</li>
+      <li>1 WE</li>
+      <li>1 MO</li>
+      <li>6 MO</li>
+      <li>CUSTOM</li>
+    </ul>
+  </div>
+</nav>

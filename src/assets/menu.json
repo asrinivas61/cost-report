@@ -1,0 +1,206 @@
+[
+    {
+        "name": "Site Heirarchy",
+        "items": [
+            {
+                "name": "India",
+                "subItems": [
+                    {
+                        "name": "Panjim",
+                        "subItems1": [
+                            {
+                                "name": "Site1"
+                            },
+                            {
+                                "name": "Site2"
+                            },
+                            {
+                                "name": "Site3"
+                            },
+                            {
+                                "name": "Site4"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bangalore",
+                        "subItems1": [
+                            {
+                              "name": "Site5"
+                            },
+                            {
+                              "name": "Site6"
+                            },
+                            {
+                              "name": "Site7"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "United States",
+                "url": "US"
+            },
+            {
+                "name": "Brazil",
+                "url": "Brazil"
+            },
+            {
+                "name": "Singapore",
+                "url": "Singapore"
+            }
+        ]
+    },
+    {
+      "name": "Equipment",
+      "items": [
+        {
+          "name": "India",
+          "subItems": [
+            {
+              "name": "bosch1"
+            },
+            {
+              "name": "bosch2"
+            },
+            {
+              "name": "bosch3"
+            },
+            {
+              "name": "bosch4"
+            }
+          ]
+        },
+        {
+          "name": "Panjim",
+          "subItems": [
+            {
+              "name": "bosch5"
+            },
+            {
+              "name": "bosch5"
+            }
+          ]
+        },
+        {
+          "name": "Bangalore",
+          "subItems": [
+            {
+              "name": "bosch6"
+            },
+            {
+              "name": "bosch7"
+            },
+            {
+              "name": "bosch8"
+            }
+          ]
+        },
+        {
+          "name": "Site1",
+          "subItems": [
+            {
+              "name": "bosch9"
+            },
+            {
+              "name": "bosch10"
+            },
+            {
+              "name": "bosch11"
+            }
+          ]
+        },
+        {
+          "name": "Site2",
+          "subItems": [
+            {
+              "name": "bosch12"
+            },
+            {
+              "name": "bosch13"
+            },
+            {
+              "name": "bosch14"
+            }
+          ]
+        },
+        {
+          "name": "Site3",
+          "subItems": [
+            {
+              "name": "bosch15"
+            },
+            {
+              "name": "bosch16"
+            },
+            {
+              "name": "bosch17"
+            }
+          ]
+        },
+        {
+          "name": "Site4",
+          "subItems": [
+            {
+              "name": "bosch18"
+            },
+            {
+              "name": "bosch19"
+            },
+            {
+              "name": "bosch20"
+            }
+          ]
+        },
+        {
+          "name": "Site5",
+          "subItems": [
+            {
+              "name": "bosch21"
+            },
+            {
+              "name": "bosch22"
+            },
+            {
+              "name": "bosch23"
+            }
+          ]
+        },
+        {
+          "name": "Site6",
+          "subItems": [
+            {
+              "name": "bosch24"
+            },
+            {
+              "name": "bosch25"
+            },
+            {
+              "name": "bosch26"
+            }
+          ]
+        },
+        {
+          "name": "Site7",
+          "subItems": [
+            {
+              "name": "bosch27"
+            },
+            {
+              "name": "bosch28"
+            },
+            {
+              "name": "bosch29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Class"
+    },
+    {
+      "name": "Shifts"
+    }
+]

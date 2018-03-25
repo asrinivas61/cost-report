@@ -1,0 +1,66 @@
+<div class="total">
+	Total
+</div>
+<div class="container-fluid graph-wrapper">
+	<div class="graph-content">
+		<div class="cost-report-graph">
+			<chart *ngIf="isLoaded" [options]="options" (load)="saveChart($event.context)">
+			  <series (hide)="onSeriesHide($event.context)">
+			    <point (select)="onPointSelect($event.context)"></point>
+			  </series>
+			</chart>
+		</div>
+		<div class="cost-report-table">
+			<div class="row">
+		    <div class="col-md-12">
+		      <table class="table table-striped" cellspacing="0" width="100%" style="width:100%">
+		        <thead>
+		          <tr>
+		            <th *ngFor="let col of columns;let i = index">
+		              <div class="btn-group" dropdown *ngIf="showColumn[i]">
+		                <span (click)="sortRowsBy(col,i)" (contextmenu)="toggleDropdown($event,i)">{{col.title}}
+		                  <span *ngIf="col.isSorted&&rowClick==i">
+		                  	<fa name="arrow-up"></fa>
+		                  </span>
+		                  <span *ngIf="!col.isSorted&&clicked&&rowClick==i">
+		                  	<fa name="arraw-down"></fa>
+		                  </span>
+		                </span>
+		              </div>
+		            </th>
+		          </tr>
+		        </thead>
+		        <tbody (mouseenter)="closeAllContextMenu()">
+		          <tr *ngFor="let row of getPagedRows(rows)">
+		            <td *ngFor="let col of columns">
+		              {{row[col.name]}}
+		            </td>
+		          </tr>
+		        </tbody>
+		      </table>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-6 paging" *ngIf="listOfPages().length > 1">
+		      <ul class="pagination" cmLangFloat>
+		        <li class="paginate_button first">
+		          <a (click)="page = 1">First</a>
+		        </li>
+		        <li class="paginate_button previous">
+		          <a (click)="previousPage()">Previous</a>
+		        </li>
+		        <li *ngFor="let p of listOfPages()" [ngClass]="{'active': p == page}" class="paginate_button">
+		          <a (click)="page = p">{{p}}</a>
+		        </li>
+		        <li class="paginate_button next">
+		          <a (click)="nextPage()">Next</a>
+		        </li>
+		        <li class="paginate_button last">
+		          <a (click)="lastPage()">Last</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>

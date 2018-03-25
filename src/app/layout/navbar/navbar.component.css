@@ -1,0 +1,187 @@
+.bg-light{
+  background-color: #ffffff;
+}
+
+.navbar{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 95%;
+  margin: auto;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+}
+
+.searchInput,
+.searchInput1 {
+  padding: 3px;
+  background-color: #dddddd57;
+}
+
+.searchInput1 {
+  position: fixed;
+  width: 12%;
+}
+
+.faSearch {
+  padding: 5px;
+}
+
+.searchInput input,
+.searchInput1 input {
+  outline: 0;
+  height: 30px;
+  font-size: 17px;
+  padding: 10px;
+  width: 100%;
+  border: 0px solid #ccc;
+}
+
+.searchInput .input,
+.searchInput1 .input {
+  display: inline-block;
+  width: 80%;
+}
+
+.plus {
+  padding-right: 10px;
+}
+
+.plusSpan {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.animate {
+  background-color: white;
+}
+
+.primMenu {
+  background-color: #daf3f0db !important;
+}
+
+.navbar .navbar-nav > li > a {
+  color: black;
+}
+
+.items a {
+  line-height: 32px;
+  margin: 2px !important;
+}
+
+.itemName {
+  font-size: 16px;
+}
+
+.toggle {
+  color: white !important;
+  background-color: #1894ffe3 !important;
+}
+
+.openSubmenu {
+  display: block;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  background-color: #f5eded !important;
+  position: relative !important;
+  box-shadow: none !important;
+  width: 95%;
+  float: right;
+  border: none;
+  transition: display 5s;
+}
+
+.open {
+  display: block;
+  width: 250px;
+  padding: 0;
+  background-color: #f5eded !important;
+}
+
+.openEquip {
+  display: block;
+  width: 150px;
+  padding: 0;
+  background-color: #f5eded !important;
+  max-height: 230px;
+  overflow-y: scroll;
+}
+
+.openEquip li:nth-child(2) {
+  margin-top: 25%;
+}
+
+.equipItem a {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.equipItem .itemName {
+  font-size: 18px;
+}
+
+.selectAll {
+  line-height: 30px;
+  padding: 5px 10px;
+}
+
+.subAnc {
+  background-color: #ace4da !important;
+}
+
+.ancAnc {
+  background-color: #b6e2f3f5 !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.acc-row{
+  display: inline;
+  overflow-x: hidden;
+}
+
+.acc-a{
+  padding: 10px 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.acc-action{
+  margin: 10px;     
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.acc-menu{
+  width: 200px;
+}
+
+.acc-menu li{
+  width: 200px;   
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar .navbar-brand{
+  padding: 0px 15px;
+}
+
+.navbar-right {
+  width: 22%;
+  height: 50px;
+  background-color: white;
+  margin: 0;
+}
+
+.navbar-right li {
+  width: 18%;
+  display: inline-block;
+  line-height: 50px;
+}

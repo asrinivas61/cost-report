@@ -1,0 +1,21 @@
+[
+	{
+          "name": "Water",
+          "data": [24, 25, 45, 15, 20, 33, 38, 31, 60],
+          "allowPointSelect": true
+      },{
+          "name": "Energy - washer",
+          "data": [47, 22, 3, 77, 90, 80, 79, 66],
+          "allowPointSelect": true
+      },
+      {
+          "name": "Energy - dryer",
+          "data": [22, 54, 64, 65, 90, 86, 24, 58],
+          "allowPointSelect": true
+      },
+      {
+          "name": "Products",
+          "data": [11, 8, 67, 63, 80, 98, 76, 44],
+          "allowPointSelect": true
+      }
+]
