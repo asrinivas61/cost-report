@@ -38,6 +38,7 @@ export class CostReportTableComponent implements OnInit {
 
   ngOnInit() {
   	this.loadGraphData();
+  	this.loadtableData();
   }
 
   loadGraphData() {
@@ -47,6 +48,13 @@ export class CostReportTableComponent implements OnInit {
   					this.isLoaded=true;
   					this.options["series"]=data;
   					console.log(this.options);
+  				})
+  }
+
+  loadtableData() {
+  	this.costReportService.getTableData()
+  				.subscribe(data=>{
+  					
   				})
   }
 
